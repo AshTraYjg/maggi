@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Servicios de Ginecología y Obstetricia - Dra. Maggilu Villa">
+	<meta name="keywords" content="Ginecología, Obstetricia, Salud, Dra. Maggilu Villa">
+	<title>Ginecología y Obstetricia - Dra. Maggilu Villa</title>
+	<link rel="stylesheet" href="nuevo-estilos.css"> <!-- Enlace al archivo de estilos CSS -->
+</head>
+<body>
+<div id="contenedor">
+	<!-- Menú desplegable -->
+	<div id="menu-desplegable">
+		<!-- Ícono tipo hamburguesa para abrir/cerrar el menú -->
+		<div id="menu-icono" onclick="toggleMenu()">☰</div>
+		<!-- Lista de enlaces del menú -->
+		<ul id="menu-lista">
+			<li><a href="#conoceme">Conóceme</a></li>
+			<li><a href="ubicacion.html">Ubicación</a></li> <!-- Nueva opción -->
+		</ul>
+	</div>
+
+	<!-- Encabezado principal -->
+	<header id="cabecera" style="background-image: url('img/img12.png');">
+		
+	</header>
+
+	<!-- Menú de navegación adicional -->
+	<nav id="menu">
+		<p>Explora nuestros servicios especializados en ginecología y obstetricia.</p>
+		<ul>
+			<li><a href="#servicio1" onclick="openServiceModal('servicio1')">Ginecológia</a></li>
+			<li><a href="#servicio2" onclick="openServiceModal('servicio2')">Obstetricia</a></li>
+			
+		</ul>
+	</nav>
+
+	<!-- Ventanas modales para servicios -->
+	<div id="modal-servicio1" class="modal-servicio" style="display: none;">
+		<div class="modal-contenido">
+			<span class="close" onclick="closeServiceModal('servicio1')">×</span>
+			<img src="img/img2.png" alt="Consulta Ginecológica" style="width: 100%; border-radius: 10px;">
+		</div>
+	</div>
+	<div id="modal-servicio2" class="modal-servicio" style="display: none;">
+		<div class="modal-contenido">
+			<span class="close" onclick="closeServiceModal('servicio2')">×</span>
+			<img src="img/img1.png" alt="Control Prenatal" style="width: 100%; border-radius: 10px;">
+		</div>
+	</div>
+	<div id="modal-servicio3" class="modal-servicio" style="display: none;">
+		<div class="modal-contenido">
+			<span class="close" onclick="closeServiceModal('servicio3')">×</span>
+			<!-- Imagen o contenido adicional para servicio3 si es necesario -->
+		</div>
+	</div>
+
+	<!-- Contenido principal -->
+	<section id="contenido">
+		<article>
+			<!-- Contenedor de servicios con funcionalidad de slide -->
+			<div class="slide-container" onmouseover="pauseSlide()" onmouseout="resumeSlide()">
+					<!-- Slide 1 -->
+					<figure class="slide">
+						<img src="img/img17.jpg" alt="Imagen 1" class="imagen">
+						<figcaption>Confianza y profesionalismo en cada consulta.</figcaption>
+					</figure>
+					<!-- Slide 2 -->
+					<figure class="slide">
+						<img src="img/img16.jpg" alt="Imagen 2" class="imagen">
+						<figcaption>Cuida tu embarazo con la mejor atención.</figcaption>
+					</figure>
+					<!-- Slide 3 -->
+					<figure class="slide">
+						<img src="img/img14.jpg" alt="Imagen 3" class="imagen">
+						<figcaption>La tecnología al servicio de tu salud.</figcaption>
+					</figure>
+				</div>
+				<!-- Indicadores del slide -->
+				<div class="slide-indicators">
+					<span class="indicator" onclick="goToSlide(0)"></span>
+					<span class="indicator" onclick="goToSlide(1)"></span>
+					<span class="indicator" onclick="goToSlide(2)"></span>
+				</div>
+		</article>
+	</section>
+
+	<!-- Modal para imágenes -->
+	<div id="imageModal" class="modal">
+		<span class="close" onclick="closeModal()">×</span>
+		<img id="modalImage" src="" alt="Imagen ampliada">
+	</div>
+
+	<!-- Sección: Vive esta experiencia -->
+	<section id="vive-experiencia">
+		<h2>Vive esta experiencia</h2>
+		<p>Momentos inolvidables llenos de amor, alegría y unión familiar.</p>
+		<div class="experiencia-galeria">
+			<img src="img/img7.jpg" alt="Dra. Maggilu Villa con los padres" class="imagen-experiencia" onclick="openModal(this)">
+			<img src="img/img8.jpg" alt="Padre mostrando al bebé" class="imagen-experiencia" onclick="openModal(this)">
+			<img src="img/img9.jpg" alt="Dra. Maggilu Villa con los padres y el bebé" class="imagen-experiencia" onclick="openModal(this)">
+		</div>
+		<!-- Video agregado -->
+		<div style="display: flex; justify-content: center; margin-top: 20px;">
+			<video controls width="800">
+				<source src="vid/vid1.mp4" type="video/mp4">
+				Tu navegador no soporta el elemento de video.
+			</video>
+		</div>
+	</section>
+
+	<!-- Sección "Conóceme" -->
+	<section id="conoceme">
+		<h2>Conóceme</h2>
+		<p>Hola, soy la Dra. Maggilu Villa, especialista en ginecología y obstetricia. Mi misión es brindar atención médica de calidad, enfocada en la salud y bienestar de las mujeres en cada etapa de sus vidas.</p>
+		<img src="img/img4.jpg" alt="Dra. Maggilu Villa" class="imagen-conoceme">
+		<a href="conoceme.html" class="boton-conoceme">Más sobre mí</a>
+	</section>
+
+	<!-- Pie de página -->
+	<footer id="pie">
+		<h2>Contáctanos</h2>
+		<p>Teléfono: +58-424-6196770 | Email: maggiluvilla@gmail.com</p>
+		<p>Copyright © 2025. Dra. Maggilu Villa - Ginecología y Obstetricia.</p>
+	</footer>
+</div>
+
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/584246196770" target="_blank" class="whatsapp-button">
+	<img src="img/ws.png" alt="WhatsApp">
+</a>
+
+<!-- Botón flotante de Instagram -->
+<a href="https://www.instagram.com/tuginecomaggi" target="_blank" class="instagram-button">
+	<img src="img/ig.png" alt="Instagram">
+</a>
+
+<script>
+	// Variables para el control del slide
+	let currentSlide = 0;
+	const slides = document.querySelectorAll('.slide');
+	const indicators = document.querySelectorAll('.indicator');
+	const totalSlides = slides.length;
+	let slideInterval;
+
+	// Mostrar el slide actual
+	function showSlide(index) {
+		slides.forEach((slide, i) => {
+			slide.style.transform = `translateX(${(i - index) * 100}%)`;
+		});
+		indicators.forEach((indicator, i) => {
+			indicator.classList.toggle('active', i === index);
+		});
+	}
+
+	// Ir al siguiente slide
+	function nextSlide() {
+		currentSlide = (currentSlide + 1) % totalSlides;
+		showSlide(currentSlide);
+	}
+
+	// Ir a un slide específico
+	function goToSlide(index) {
+		currentSlide = index;
+		showSlide(currentSlide);
+	}
+
+	// Pausar el slide al pasar el cursor
+	function pauseSlide() {
+		clearInterval(slideInterval);
+	}
+
+	// Reanudar el slide al quitar el cursor
+	function resumeSlide() {
+		slideInterval = setInterval(nextSlide, 3000);
+	}
+
+	// Iniciar el slide automáticamente
+	slideInterval = setInterval(nextSlide, 3000);
+	showSlide(currentSlide);
+
+	// Función para mostrar/ocultar el menú desplegable
+	function toggleMenu() {
+		const menuDesplegable = document.getElementById('menu-desplegable');
+		menuDesplegable.classList.toggle('menu-visible');
+	}
+
+	// Función para abrir el modal con la imagen ampliada
+	function openModal(image) {
+		const modal = document.getElementById('imageModal');
+		const modalImage = document.getElementById('modalImage');
+		modalImage.src = image.src;
+		modal.style.display = 'flex';
+	}
+
+	// Función para cerrar el modal
+	function closeModal() {
+		const modal = document.getElementById('imageModal');
+		modal.style.display = 'none';
+	}
+
+	// Función para abrir la ventana modal de un servicio
+	function openServiceModal(servicioId) {
+		document.getElementById(`modal-${servicioId}`).style.display = 'flex';
+	}
+
+	// Función para cerrar la ventana modal de un servicio
+	function closeServiceModal(servicioId) {
+		document.getElementById(`modal-${servicioId}`).style.display = 'none';
+	}
+</script>
+</body>
+</html>
